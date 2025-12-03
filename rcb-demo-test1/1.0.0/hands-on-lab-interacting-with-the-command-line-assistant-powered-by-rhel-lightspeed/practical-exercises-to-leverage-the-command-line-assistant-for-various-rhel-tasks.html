@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Practical exercises to leverage the command-line assistant for various RHEL tasks :: RHEL Lightspeed for RHEL Systems</title>
+    <link rel="prev" href="hands-on-lab-interacting-with-the-command-line-assistant-powered-by-rhel-lightspeed.html">
+    <link rel="next" href="../appendix/appendix.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">RHEL Lightspeed for RHEL Systems</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rcb-demo-test1" data-version="1.0.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">RHEL Lightspeed for RHEL Systems</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../introducing-rhel-lightspeed-for-rhel-systems/introducing-rhel-lightspeed-for-rhel-systems.html">Introducing RHEL Lightspeed for RHEL Systems</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../introducing-rhel-lightspeed-for-rhel-systems/overview-of-the-command-line-assistant.html">Overview of the command-line assistant</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../introducing-rhel-lightspeed-for-rhel-systems/features-and-capabilities.html">Features and capabilities</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../rhel-lightspeed-use-of-generative-ai-functionalities/rhel-lightspeed-use-of-generative-ai-functionalities.html">RHEL Lightspeed Use of Generative AI Functionalities</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rhel-lightspeed-use-of-generative-ai-functionalities/rhel-lightspeeds-integration-with-watsonx.html">RHEL Lightspeed’s integration with WatsonX</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rhel-lightspeed-use-of-generative-ai-functionalities/saas-external-infrastructure-deployment.html">SaaS external infrastructure deployment</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../interacting-with-the-command-line-assistant-powered-by-rhel-lightspeed/interacting-with-the-command-line-assistant-powered-by-rhel-lightspeed.html">Interacting with the Command-Line Assistant Powered by RHEL Lightspeed</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../interacting-with-the-command-line-assistant-powered-by-rhel-lightspeed/ai-driven-expertise-for-system-configuration-management-and-troubleshooting.html">AI-driven expertise for system configuration, management, and troubleshooting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="hands-on-lab-interacting-with-the-command-line-assistant-powered-by-rhel-lightspeed.html">Hands-on Lab: Interacting with the Command-Line Assistant Powered by RHEL Lightspeed</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="practical-exercises-to-leverage-the-command-line-assistant-for-various-rhel-tasks.html">Practical exercises to leverage the command-line assistant for various RHEL tasks</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">RHEL Lightspeed for RHEL Systems</span>
+    <span class="version">1.0.0</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">RHEL Lightspeed for RHEL Systems</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">RHEL Lightspeed for RHEL Systems</a></li>
+    <li><a href="hands-on-lab-interacting-with-the-command-line-assistant-powered-by-rhel-lightspeed.html">Hands-on Lab: Interacting with the Command-Line Assistant Powered by RHEL Lightspeed</a></li>
+    <li><a href="practical-exercises-to-leverage-the-command-line-assistant-for-various-rhel-tasks.html">Practical exercises to leverage the command-line assistant for various RHEL tasks</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Practical exercises to leverage the command-line assistant for various RHEL tasks</h1>
+<h1 id="_practical_exercises_rhel_lightspeed" class="sect0"><a class="anchor" href="#_practical_exercises_rhel_lightspeed"></a>Hands-on Lab: Interacting with the Command-Line Assistant Powered by RHEL Lightspeed</h1>
+<div class="paragraph">
+<p>This lab is designed to provide you with practical, hands-on experience in leveraging the AI-driven expertise of the Red Hat Enterprise Linux (RHEL) Lightspeed command-line assistant. You will explore its capabilities for common RHEL tasks, including system configuration, management, and troubleshooting. By the end of this lab, you will be proficient in using this powerful tool to streamline your RHEL administration workflows.</p>
+</div>
+<div class="sect1">
+<h2 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before you begin this lab, ensure you have:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Access to a RHEL system (physical or virtual machine) with the RHEL Lightspeed command-line assistant installed and configured.</p>
+</li>
+<li>
+<p>Basic command-line familiarity with RHEL operations.</p>
+</li>
+<li>
+<p><code>sudo</code> privileges on the RHEL system for executing administrative commands.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercise_1_seeking_configuration_assistance"><a class="anchor" href="#_exercise_1_seeking_configuration_assistance"></a>Exercise 1: Seeking Configuration Assistance</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The RHEL Lightspeed assistant can significantly simplify system configuration by providing instant, accurate commands and guidance. This exercise will demonstrate how to use Lightspeed for common configuration tasks.</p>
+</div>
+<div class="sect2">
+<h3 id="_task_1_1_installing_software_packages"><a class="anchor" href="#_task_1_1_installing_software_packages"></a>Task 1.1: Installing Software Packages</h3>
+<div class="paragraph">
+<p>Learn how to ask RHEL Lightspeed for the correct <code>dnf</code> command to install a package and then execute the suggested command. This illustrates how Lightspeed acts as an intelligent guide, ensuring you use the most efficient and accurate commands.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Open your terminal.</strong></p>
+</li>
+<li>
+<p><strong>Ask RHEL Lightspeed how to install a package.</strong> For this task, let&#8217;s use <code>htop</code>, a popular interactive process viewer.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">lightspeed How do I install the htop package?</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Analyze Lightspeed&#8217;s response.</strong> The assistant should provide a clear command, likely using <code>dnf</code>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The output from Lightspeed might include additional context or explanations before the suggested command. Focus on the command itself.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><strong>Execute the recommended command.</strong> This will install <code>htop</code> on your system.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">sudo dnf install htop -y</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Verify the installation.</strong> Run <code>htop</code> to confirm it&#8217;s installed and functioning.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">htop</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Exit <code>htop</code>.</strong> Press <code>q</code>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_task_1_2_configuring_firewall_rules"><a class="anchor" href="#_task_1_2_configuring_firewall_rules"></a>Task 1.2: Configuring Firewall Rules</h3>
+<div class="paragraph">
+<p>Firewall configuration can sometimes be intricate. Use RHEL Lightspeed to quickly get the commands needed to open a specific port using <code>firewalld</code>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Query Lightspeed for firewall configuration.</strong> Ask how to open a common service port, like HTTP (port 80) permanently.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">lightspeed How do I open port 80/tcp permanently using firewalld?</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Review the suggested <code>firewall-cmd</code> commands.</strong> Lightspeed will provide the necessary commands to add the rule and reload the firewall.</p>
+</li>
+<li>
+<p><strong>Execute the commands provided by Lightspeed.</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">sudo firewall-cmd --add-port=80/tcp --permanent
+sudo firewall-cmd --reload</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Verify the new firewall rule.</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">sudo firewall-cmd --list-all</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong><em>Optional:</em> Remove the rule after verification.</strong> It&#8217;s good practice to clean up lab changes. Ask Lightspeed how to remove it, or use the inverse command.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">lightspeed How do I remove port 80/tcp permanently using firewalld?
+sudo firewall-cmd --remove-port=80/tcp --permanent
+sudo firewall-cmd --reload</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercise_2_troubleshooting_with_ai_driven_expertise"><a class="anchor" href="#_exercise_2_troubleshooting_with_ai_driven_expertise"></a>Exercise 2: Troubleshooting with AI-Driven Expertise</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One of the most powerful features of RHEL Lightspeed is its ability to assist with troubleshooting. By analyzing context or explicit questions, it can guide you toward solutions for common system issues.</p>
+</div>
+<div class="sect2">
+<h3 id="_task_2_1_diagnosing_a_service_failure"><a class="anchor" href="#_task_2_1_diagnosing_a_service_failure"></a>Task 2.1: Diagnosing a Service Failure</h3>
+<div class="paragraph">
+<p>In this task, you will simulate a <code>sshd</code> service stop and then use Lightspeed to help diagnose and restart it, demonstrating how the assistant aids in service management and troubleshooting. This directly leverages the capability mentioned in the context for "troubleshoot SSHD service failing to start."</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Stop the <code>sshd</code> service.</strong> This will simulate a service failure scenario.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">sudo systemctl stop sshd</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Check the status of the <code>sshd</code> service.</strong> Observe that it is <code>inactive (dead)</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">systemctl status sshd</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Ask RHEL Lightspeed for troubleshooting assistance.</strong> Provide context about the service that is not running.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">lightspeed My sshd service is not running. How can I troubleshoot it?</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Analyze Lightspeed&#8217;s suggestions.</strong> The assistant should provide steps to check logs (e.g., <code>journalctl -u sshd</code>), examine configuration, and attempt to start/enable the service.</p>
+</li>
+<li>
+<p><strong>Use Lightspeed to get the correct commands to start and enable <code>sshd</code>.</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">lightspeed How do I start and enable the sshd service?</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Execute the recommended commands</strong> to bring the <code>sshd</code> service back online and ensure it starts on boot.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">sudo systemctl start sshd
+sudo systemctl enable sshd</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Verify the <code>sshd</code> service is now running and enabled.</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">systemctl status sshd</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exercise_3_advanced_interaction_and_history_review"><a class="anchor" href="#_exercise_3_advanced_interaction_and_history_review"></a>Exercise 3: Advanced Interaction and History Review</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>RHEL Lightspeed can integrate with your current terminal session by processing command output or by allowing you to review your past interactions, enhancing its utility for more complex scenarios.</p>
+</div>
+<div class="sect2">
+<h3 id="_task_3_1_analyzing_command_output_with_lightspeed"><a class="anchor" href="#_task_3_1_analyzing_command_output_with_lightspeed"></a>Task 3.1: Analyzing Command Output with Lightspeed</h3>
+<div class="paragraph">
+<p>Learn how to pipe the output of a standard RHEL command directly into Lightspeed for analysis and suggestions. This is particularly useful for large log files or complex command outputs where manual parsing might be time-consuming.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Generate some system log output.</strong> For this exercise, we&#8217;ll get recent entries from the system journal.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">journalctl -xe --since "10 minutes ago"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Redirect this output to RHEL Lightspeed for analysis.</strong> Ask Lightspeed to interpret or provide insights based on the logs.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">journalctl -xe --since "10 minutes ago" | lightspeed analyze this output for errors or warnings</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Review Lightspeed&#8217;s analysis.</strong> The assistant will summarize the output and may suggest troubleshooting steps if it identifies any critical events.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The relevance of Lightspeed&#8217;s analysis will depend on the actual content of your logs. If there are no significant errors or warnings, Lightspeed might simply state that.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_task_3_2_reviewing_interaction_history"><a class="anchor" href="#_task_3_2_reviewing_interaction_history"></a>Task 3.2: Reviewing Interaction History</h3>
+<div class="paragraph">
+<p>The <code>lightspeed</code> assistant keeps a history of your interactions. This feature allows you to quickly recall previous questions and the solutions or advice provided, which is invaluable for recurring tasks or forgotten commands.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Ask RHEL Lightspeed to display your interaction history.</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">lightspeed history</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Scroll through your interaction history.</strong> Observe how past queries and Lightspeed&#8217;s responses are displayed, offering a useful record of your troubleshooting and configuration journey.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Congratulations! You have completed the hands-on lab demonstrating practical interactions with the RHEL Lightspeed command-line assistant. You&#8217;ve gained experience in:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Utilizing Lightspeed for straightforward system configuration tasks, such as package installation and firewall management.</p>
+</li>
+<li>
+<p>Leveraging Lightspeed&#8217;s AI-driven insights to troubleshoot and resolve a service-related issue.</p>
+</li>
+<li>
+<p>Interacting with Lightspeed by piping command output for analysis and reviewing your past conversations.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These exercises showcase RHEL Lightspeed as a powerful, intelligent assistant that can significantly enhance your efficiency and effectiveness in managing and troubleshooting Red Hat Enterprise Linux systems. Continue exploring its capabilities to integrate it further into your daily RHEL administration tasks.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="hands-on-lab-interacting-with-the-command-line-assistant-powered-by-rhel-lightspeed.html">Hands-on Lab: Interacting with the Command-Line Assistant Powered by RHEL Lightspeed</a></span>
+  <span class="next"><a href="../appendix/appendix.html">Appendix</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
