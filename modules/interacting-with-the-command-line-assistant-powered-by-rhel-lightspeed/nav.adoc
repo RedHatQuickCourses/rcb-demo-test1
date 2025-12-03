@@ -1,0 +1,2 @@
+* xref:interacting-with-the-command-line-assistant-powered-by-rhel-lightspeed.adoc[]
+** xref:ai-driven-expertise-for-system-configuration-management-and-troubleshooting.adoc[]

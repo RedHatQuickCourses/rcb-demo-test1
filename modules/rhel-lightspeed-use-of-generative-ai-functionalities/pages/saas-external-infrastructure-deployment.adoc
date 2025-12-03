@@ -1,0 +1,127 @@
+#  SaaS external infrastructure deployment
+
+[[rhel-lightspeed-saas-deployment]]
+= RHEL Lightspeed for RHEL Systems: SaaS External Infrastructure Deployment
+
+[abstract]
+This module explores how RHEL Lightspeed leverages external Software-as-a-Service (SaaS) infrastructure to deliver its generative AI capabilities. We will detail the architecture that facilitates this interaction and provide practical steps for configuring the command-line assistant to communicate effectively with these external services, including setting up API endpoints and proxy configurations.
+
+== Understanding SaaS External Infrastructure for RHEL Lightspeed's AI
+
+RHEL Lightspeed transforms the RHEL command-line experience by integrating advanced generative AI functionalities directly into your system management workflows. To achieve this, RHEL Lightspeed does not run a full-fledged Large Language Model (LLM) locally on each RHEL system. Instead, it utilizes a client-server architecture where the `command-line-assistant` daemon on your RHEL system acts as a client, securely communicating with robust, scalable generative AI services hosted externally as Software-as-a-Service (SaaS).
+
+This "SaaS external infrastructure deployment" model offers several key benefits:
+
+*   *Leveraging Specialized AI:* It allows RHEL Lightspeed to tap into powerful, pre-trained AI models, such as those provided by IBM WatsonX (as mentioned in our objectives), without requiring significant local computing resources. These models are continuously updated and optimized by the service provider.
+*   *Scalability and Performance:* The external SaaS infrastructure is designed for high availability and elastic scalability, capable of handling numerous requests from RHEL Lightspeed users simultaneously, ensuring rapid and accurate responses.
+*   *Simplified Management:* Red Hat manages the underlying AI infrastructure, updates, and maintenance, allowing RHEL administrators to focus on their RHEL systems rather than AI model deployment and upkeep.
+*   *Security and Compliance:* Communications between the RHEL Lightspeed client and the external AI service are secured, and the SaaS provider typically adheres to enterprise-grade security and compliance standards.
+
+The `command-line-assistant` installed on your RHEL system acts as the gateway to these external AI capabilities. When you interact with it, your queries are securely transmitted to the configured external AI service, processed, and the generated insights are returned to your terminal. This setup ensures that the intelligent assistance is always available, up-to-date, and performs optimally.
+
+=== Configuring Connectivity to External Generative AI Services
+
+For the `command-line-assistant` to communicate with the external generative AI SaaS infrastructure, it needs to know *where* to send its requests. This is defined through an *endpoint* configuration, which specifies the URL of the API server for the RHEL Lightspeed service. While the primary AI processing happens externally (e.g., on WatsonX), Red Hat provides an API layer that the `command-line-assistant` interacts with.
+
+The configuration for this endpoint is managed within the `/etc/xdg/command-line-assistant/config.toml` file, a TOML-formatted configuration file specific to the command-line assistant.
+
+==== Hands-on Lab: Configuring the RHEL Lightspeed Endpoint
+
+In this hands-on lab, you will configure the `command-line-assistant` to point to a specific API endpoint, which is crucial for enabling its connection to the external SaaS AI services. For this exercise, we'll use a placeholder example typical of an on-premise deployment managed by Red Hat Satellite, but the principle applies equally to a direct connection to a Red Hat-hosted SaaS endpoint if provided.
+
+.Prerequisites
+Ensure the `command-line-assistant` is already installed on your RHEL system. If not, install it using `sudo dnf install command-line-assistant`.
+
+.Procedure
+.  Locate and open the `config.toml` file for editing:
++
+[source,bash,subs="attributes+"]
+----
+sudo vi /etc/xdg/command-line-assistant/config.toml
+----
+.  Within the `config.toml` file, locate the `endpoint` configuration option. By default, it might be commented out or set to a placeholder. Replace its value to point to your desired API server.
++
+For demonstration purposes, if you were connecting to an on-premise Red Hat Satellite instance acting as a proxy to the external Lightspeed service, your configuration might look like this:
++
+[source,toml]
+----
+#The endpoint points to an API server.
+endpoint = "https://satellite.example.server.com/api/lightspeed/v1"
+----
++
+[NOTE]
+The specific endpoint URL will be provided by Red Hat or your organization, depending on your RHEL Lightspeed subscription and deployment model. For direct SaaS connectivity, this might be a different Red Hat-provided URL.
+
+.  Save the changes and exit the text editor.
+.  Restart the `command-line-assistant` daemon (`clad`) for the changes to take effect:
++
+[source,bash,subs="attributes+"]
+----
+sudo systemctl restart clad
+----
++
+This step ensures that the `command-line-assistant` reloads its configuration and attempts to connect to the newly specified endpoint.
+
+=== Configuring Proxy Settings for SaaS Connectivity
+
+In many enterprise environments, direct outbound internet access is restricted, and all external network traffic must pass through a proxy server. When the RHEL Lightspeed `command-line-assistant` attempts to connect to the external SaaS generative AI infrastructure, it adheres to these network policies. Configuring proxy settings ensures that the `clad` daemon can successfully route its HTTP or HTTPS requests through your organization's proxy server to reach the external Lightspeed API endpoint.
+
+The proxy configuration is also managed within the `/etc/xdg/command-line-assistant/config.toml` file, specifically within the `[backend]` section.
+
+==== Hands-on Lab: Setting Up Proxy for RHEL Lightspeed
+
+This lab guides you through configuring an HTTP or HTTPS proxy for the `command-line-assistant`, allowing it to communicate with external AI services in environments with restricted network access.
+
+.Prerequisites
+The `command-line-assistant` powered by RHEL Lightspeed is installed.
+
+.Procedure
+.  Access the `config.toml` configuration file for editing:
++
+[source,bash,subs="attributes+"]
+----
+sudo vi /etc/xdg/command-line-assistant/config.toml
+----
+.  Locate the `[backend]` block in the `config.toml` file. You will typically find a commented-out `proxies` key within this section.
++
+[source,toml]
+----
+# Backend settings for communicating with the external API.
+[backend]
+...
+# proxies = { http = "http://example-host:8002", https = "https://example-host:8002" }
+----
+.  Uncomment the `proxies` key and define your `http` or `https` proxy host and port.
++
+For example, to configure an HTTPS proxy:
++
+[source,toml]
+----
+[backend]
+…
+proxies = { https = "https://<your-https-proxy-host>:1234" }
+----
++
+If your environment uses an HTTP proxy, you would define it as:
++
+[source,toml]
+----
+[backend]
+…
+proxies = { http = "http://<your-http-proxy-host>:8002" }
+----
++
+[NOTE]
+You can define both `http` and `https` keys within the `proxies` dictionary if your environment requires different proxies for different protocols. The `http` value and `https` key control if the HTTP or HTTPS traffic from `clad` is routed to the specified proxy, but the protocol of the proxy itself does not necessarily influence the protocol of the traffic being proxied.
+
+.  After making the changes, save the file and exit the editor.
+.  Restart the `clad` daemon for the proxy settings to become effective:
++
+[source,bash,subs="attributes+"]
+----
+sudo systemctl restart clad
+----
++
+After restarting, the `command-line-assistant` will now attempt to route its external communications through the configured proxy, enabling it to reach the RHEL Lightspeed generative AI SaaS infrastructure.
+
+By correctly configuring both the API endpoint and any necessary proxy settings, your RHEL systems can fully leverage the intelligent assistance provided by RHEL Lightspeed, seamlessly integrating with powerful external generative AI services for enhanced system management and troubleshooting.

@@ -1,0 +1,6 @@
+#  Introducing RHEL Lightspeed for RHEL Systems
+
+RHEL Lightspeed for RHEL Systems introduces a command-line assistant designed to:
+
+* Leverage AI-driven expertise to simplify system configuration, management, and troubleshooting on RHEL.
+* Respond with information and suggested commands to assist users with various RHEL tasks.

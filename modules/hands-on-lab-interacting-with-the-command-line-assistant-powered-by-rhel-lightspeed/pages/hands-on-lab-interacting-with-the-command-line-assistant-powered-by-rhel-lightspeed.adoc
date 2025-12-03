@@ -1,0 +1,13 @@
+#  Hands-on Lab: Interacting with the Command-Line Assistant Powered by RHEL Lightspeed
+
+=== Hands-on Lab: Interacting with the Command-Line Assistant Powered by RHEL Lightspeed
+
+This hands-on lab provides practical exercises to leverage the AI-driven command-line assistant powered by RHEL Lightspeed. It focuses on using the assistant for various RHEL tasks, including:
+
+*   Configuring, managing, and troubleshooting RHEL systems.
+*   Answering RHEL-related questions.
+*   Troubleshooting and fixing issues.
+*   Understanding log files.
+*   Getting recommendations.
+
+Participants will learn to interact with the assistant using the `c "question"` command for interactive workflows.

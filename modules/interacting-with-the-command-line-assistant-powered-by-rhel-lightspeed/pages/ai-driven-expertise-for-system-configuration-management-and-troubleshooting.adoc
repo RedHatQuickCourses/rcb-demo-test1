@@ -1,0 +1,54 @@
+#  AI-driven expertise for system configuration, management, and troubleshooting
+
+// tag::ai-driven-expertise[]
+== AI-driven Expertise for System Configuration, Management, and Troubleshooting
+
+The command-line assistant powered by Red Hat Enterprise Linux (RHEL) Lightspeed brings cutting-edge artificial intelligence (AI) directly to your RHEL command line, transforming how you interact with your systems. This powerful tool is designed to demystify complex tasks, provide immediate insights, and streamline workflows for system administrators and users of all experience levels.
+
+At its core, RHEL Lightspeed leverages generative AI capabilities, drawing information from an extensive knowledge base that includes:
+
+*   Red Hat's Knowledge Centered Service (KCS) articles
+*   Official RHEL product documentation
+*   The broader Red Hat Knowledgebase
+*   Other authoritative Red Hat resources
+
+This comprehensive data set empowers the assistant to offer highly accurate and relevant guidance for a wide array of RHEL-related activities.
+
+=== How RHEL Lightspeed Delivers AI-Driven Expertise
+
+The command-line assistant acts as your expert guide, providing assistance in three key areas:
+
+==== System Configuration
+
+Configuring RHEL systems, especially when implementing new features or optimizing existing setups, can be intricate. RHEL Lightspeed simplifies this by:
+
+*   **Answering RHEL-related questions:** Get instant explanations for commands, services, and best practices.
+*   **Implementing new RHEL features:** Receive step-by-step instructions and command examples for setting up and configuring new functionalities.
+*   **Finding information:** Quickly retrieve details on specific configurations, files, or packages without sifting through extensive documentation manually.
+
+Using natural language, you can ask the assistant how to configure a network interface, set up a firewall rule, or deploy a new service, and it will provide concise, actionable advice.
+
+==== System Management
+
+Effective system management requires a deep understanding of ongoing operations and the ability to respond to changing requirements. The RHEL Lightspeed assistant enhances your management capabilities by:
+
+*   **Interactive workflows:** Engage in a dynamic conversation to achieve complex management goals, with the assistant guiding you through each stage.
+*   **Asking for recommendations:** Get expert suggestions for optimizing system performance, enhancing security, or adhering to best practices. For example, you might ask for recommendations on disk partitioning for a specific workload or strategies for patching.
+*   **Streamlining routine tasks:** Automate or simplify repetitive management activities by understanding the underlying commands and processes with the assistant's help.
+
+This allows you to manage your RHEL environment more efficiently, whether you're scaling resources, performing updates, or monitoring system health.
+
+==== Troubleshooting and Fixing Issues
+
+One of the most valuable aspects of RHEL Lightspeed's AI-driven expertise is its ability to assist with troubleshooting. When issues arise, quick diagnosis and resolution are critical. The assistant helps by:
+
+*   **Assistance troubleshooting and fixing issues:** Describe your problem in natural language, and the assistant can suggest potential causes and provide commands to diagnose and resolve the issue.
+*   **Understanding log files:** Paste snippets from log files, and the assistant can interpret them, explaining error messages, warnings, and critical events, helping you pinpoint the root cause of a problem.
+*   **Expert advice:** Gain insights into common problems and their solutions, leveraging the collective knowledge encapsulated within Red Hat's extensive support resources.
+
+This capability significantly reduces the time and effort traditionally required for debugging, empowering even less experienced users to tackle complex problems.
+
+The command-line assistant powered by RHEL Lightspeed integrates seamlessly into your command-line interface, providing on-demand, AI-driven expertise that makes configuring, managing, and troubleshooting RHEL systems more accessible and efficient than ever before. You can leverage its power for interactive workflows to solve issues, implement new RHEL features, and find information, all by using natural language.
+
+A dedicated hands-on lab will follow, where you will get practical experience interacting with the command-line assistant for various RHEL tasks.
+// end::ai-driven-expertise[]

@@ -1,0 +1,3 @@
+* xref:rhel-lightspeed-use-of-generative-ai-functionalities.adoc[]
+** xref:rhel-lightspeeds-integration-with-watsonx.adoc[]
+** xref:saas-external-infrastructure-deployment.adoc[]

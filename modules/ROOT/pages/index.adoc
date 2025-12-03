@@ -1,22 +1,27 @@
-= An Example Quick Course
+=  RHEL Lightspeed for RHEL Systems
 :navtitle: Home
 
 == Introduction
 
-Course Title: Course title FIXME
+Course Title:  RHEL Lightspeed for RHEL Systems
 
 Description:
 Course description FIXME
 
 Duration: FIXME hours
 
-== Objectives
+== Topics covered in this course
 
-On completing this course, you should be able to:
 
-* Observable, measurable objective...
-* Observable, measurable objective...
-* Observable, measurable objective...
+*  Introducing RHEL Lightspeed for RHEL Systems
+
+*  RHEL Lightspeed Use of Generative AI Functionalities
+
+*  Interacting with the Command-Line Assistant Powered by RHEL Lightspeed
+
+*  Hands-on Lab: Interacting with the Command-Line Assistant Powered by RHEL Lightspeed
+
+
 
 == Prerequisites
 

@@ -1,0 +1,2 @@
+* xref:hands-on-lab-interacting-with-the-command-line-assistant-powered-by-rhel-lightspeed.adoc[]
+** xref:practical-exercises-to-leverage-the-command-line-assistant-for-various-rhel-tasks.adoc[]

@@ -1,0 +1,13 @@
+#  Interacting with the Command-Line Assistant Powered by RHEL Lightspeed
+
+=== Interacting with the Command-Line Assistant Powered by RHEL Lightspeed
+
+The RHEL Lightspeed command-line assistant offers AI-driven expertise for RHEL system configuration, management, and troubleshooting.
+
+Key aspects of interaction:
+
+*   Uses plain language for input, simplifying complex tasks for all users.
+*   Initiate queries using the `c` command followed by a question in quotation marks (e.g., `$ c "What is RHEL"`).
+*   Supports interactive workflows, allowing users to ask follow-up questions, understand command output, or diagnose issues.
+*   Assists with RHEL-related questions, troubleshooting, and deciphering log entries.
+*   Does not require direct internet connectivity for every RHEL system; proxying requests is supported.

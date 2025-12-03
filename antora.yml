@@ -1,10 +1,16 @@
-name: REPLACEREPONAME
-title: FIXME Course Title
-version: 1
+name: rcb-demo-test1
+title:  RHEL Lightspeed for RHEL Systems
+version: 1.0.0
 nav:
 - modules/ROOT/nav.adoc
 - modules/LABENV/nav.adoc
-- modules/chapter1/nav.adoc
-- modules/chapter2/nav.adoc
-- modules/chapter3/nav.adoc
+
+- modules/introducing-rhel-lightspeed-for-rhel-systems/nav.adoc
+
+- modules/rhel-lightspeed-use-of-generative-ai-functionalities/nav.adoc
+
+- modules/interacting-with-the-command-line-assistant-powered-by-rhel-lightspeed/nav.adoc
+
+- modules/hands-on-lab-interacting-with-the-command-line-assistant-powered-by-rhel-lightspeed/nav.adoc
+
 - modules/appendix/nav.adoc

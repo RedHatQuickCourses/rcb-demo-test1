@@ -1,0 +1,26 @@
+#  Features and capabilities
+
+Here is the detailed educational content on "Features and capabilities" of RHEL Lightspeed for RHEL Systems, presented in Antora AsciiDoc format.
+
+[#_features_and_capabilities]
+=== Features and Capabilities
+
+The command-line assistant powered by RHEL Lightspeed extends the capabilities of your Red Hat Enterprise Linux (RHEL) environment by integrating artificial intelligence directly into your terminal. Designed to enhance system management and troubleshooting, it serves as an intelligent companion for both seasoned administrators and those new to RHEL.
+
+This powerful AI tool is an optional component accessible directly within the RHEL command-line interface (CLI). Its core strength lies in its extensive knowledge base, which is continuously fed by official Red Hat resources. This includes, but is not limited to, highly valuable Knowledge Centered Service (KCS) articles, comprehensive RHEL documentation, and various other authoritative Red Hat materials. This ensures that the advice and solutions provided are accurate, reliable, and aligned with Red Hat best practices.
+
+The primary features and capabilities of the RHEL Lightspeed command-line assistant include:
+
+*   *Answering RHEL-Related Questions*: Get immediate, accurate answers to a wide array of RHEL questions, from fundamental concepts to intricate system behaviors. Whether you need to understand a specific command, a service's function, or a configuration parameter, Lightspeed provides concise explanations.
+*   *Assistance with Troubleshooting and Fixing Issues*: When encountering system issues, Lightspeed can guide you through diagnostic steps, identify potential root causes, and suggest commands or procedures to resolve problems. This drastically reduces the time spent on manual research and trial-and-error.
+*   *Understanding Log Files*: Log files are critical for system analysis but can often be complex and verbose. The assistant can help interpret log entries, explain their significance, and point out anomalies or error messages, making it easier to pinpoint issues.
+*   *Asking for Recommendations*: Leverage Lightspeed's expertise to get recommendations on system configurations, security hardening, performance tuning, or best practices for specific RHEL services. For example, you might ask for recommended firewall rules for a web server or optimal filesystem options for a database.
+*   *Interactive Workflows*: Beyond static answers, RHEL Lightspeed facilitates interactive workflows. You can engage in a conversational manner to progressively troubleshoot complex problems, implement new RHEL features, or gather comprehensive information step-by-step. This dynamic interaction helps you navigate intricate tasks with greater ease and confidence.
+
+It is important to note a key aspect of how the command-line assistant operates regarding system context:
+
+[IMPORTANT]
+.Assistant's Access to System Information
+The command-line assistant powered by RHEL Lightspeed does *not* have direct access to the real-time information of the system it is running on. For instance, it cannot directly tell you the current free memory or CPU utilization of your machine. Instead, its capability lies in providing you with the *knowledge* and *commands* necessary for you to obtain that information yourself. You can, however, provide details about your environment in your input messages, which are then processed by the underlying Large Language Model (LLM) provider to offer more contextually relevant advice. For example, if you ask "How much free memory is there?", the assistant will respond by providing you with the `free -h` command, which you can then execute to get the desired output.
+
+This design ensures that while the assistant is highly knowledgeable, it respects the operational boundaries and security of your local system, empowering you with the tools and information to manage your environment effectively.

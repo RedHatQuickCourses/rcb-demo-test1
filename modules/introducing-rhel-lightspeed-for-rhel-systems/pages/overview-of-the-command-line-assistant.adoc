@@ -1,0 +1,68 @@
+#  Overview of the command-line assistant
+
+Here is the detailed educational content for the "Overview of the command-line assistant" topic, presented in Antora AsciiDoc format.
+
+```asciidoc
+[[overview-rhel-lightspeed-cli-assistant]]
+= RHEL Lightspeed for RHEL Systems: Command-Line Assistant Overview
+
+== Overview of the RHEL Lightspeed Command-Line Assistant
+
+The command-line assistant powered by RHEL Lightspeed represents a significant advancement in how users interact with Red Hat Enterprise Linux (RHEL) systems. It is an innovative tool designed to seamlessly integrate generative AI capabilities directly into your terminal environment, providing an intelligent companion for system administration and operations.
+
+This assistant is engineered to support a wide spectrum of users, from those who are less experienced with RHEL and command-line interfaces to seasoned administrators seeking quick insights or troubleshooting assistance. Its primary goal is to simplify complex RHEL tasks, making system management more intuitive and efficient.
+
+=== Key Features and Capabilities
+
+The RHEL Lightspeed command-line assistant extends the traditional command-line experience by offering AI-driven expertise for a variety of RHEL-related tasks. Its core capabilities include:
+
+*   *Answering RHEL-Related Questions:* Get immediate, context-aware answers to your queries about RHEL commands, configurations, services, and best practices directly within your terminal.
+*   *Assisting with Troubleshooting:* Leverage AI to help diagnose and resolve system issues, from service failures to network misconfigurations, by providing guided steps and potential solutions.
+*   *Deciphering Log Entries:* Simplify the analysis of complex log files by asking the assistant to explain log messages, identify critical events, or suggest actions based on log patterns.
+*   *Configuration Guidance:* Receive recommendations and instructions for configuring various RHEL components and services.
+*   *General RHEL Task Assistance:* Support for a broad range of other operational tasks, enhancing productivity for both routine and non-routine operations.
+
+.Always Exercise Human Review
+[WARNING]
+====
+Do not rely on the results from AI tools without human review. Always check the AI and Large Language Model (LLM)-generated responses for accuracy, security implications, and applicability before implementing any generated suggestions or commands on your RHEL systems. AI outputs are suggestions and should be treated as such.
+====
+
+=== How the Command-Line Assistant Processes Your Queries
+
+Understanding the underlying process helps in appreciating the power and intelligence behind the RHEL Lightspeed command-line assistant. When you submit a question, a series of steps occur to generate an informed response:
+
+.   *Input Reception:* The command-line assistant receives your question as an input from the terminal.
+.   *Conversation Logging:* A complete transcript of your interaction, including your queries, is logged and stored. This ensures continuity and aids in refining future interactions. The logged information includes:
+    *   The precise queries submitted by the user.
+    *   The comprehensive message sent to the configured Large Language Model (LLM) provider, which encapsulates system instructions, relevant documentation references, and your original question.
+    *   The full response received back from the LLM provider.
+.   *Backend Processing:* Your input is then processed by the command-line assistant's backend infrastructure.
+.   *Knowledge Retrieval:* The assistant intelligently searches for relevant knowledge pertaining to your query from its curated knowledge base. This contextual information is crucial for generating accurate responses.
+.   *AI Inference Request:* Your query, along with the retrieved relevant knowledge and any additional instructions, is packaged and sent for AI inference to the configured LLM provider (e.g., IBM WatsonX).
+.   *Output Delivery:* Finally, the command-line assistant receives the processed response from the LLM provider and delivers it as an output directly to your terminal.
+
+This sophisticated process ensures that the responses you receive are not only contextually relevant but also grounded in a vast repository of RHEL knowledge, enhanced by generative AI capabilities.
+
+=== Hands-on Activity: First Interaction with the Command-Line Assistant
+
+Let's begin with a simple interaction to understand how to pose a question to the RHEL Lightspeed command-line assistant.
+
+.Prerequisites
+Ensure the RHEL Lightspeed command-line assistant is installed and configured on your RHEL system.
+
+.Procedure
+.   Open your terminal on a RHEL system where the command-line assistant is provisioned.
+.   To ask a question, use the `c` command followed by your query enclosed in double quotation marks.
+    For example, to ask what RHEL is, type the following command:
++
+[source,bash]
+----
+$ c "What is RHEL"
+----
++
+.Expected Output
+The command-line assistant will process your query and return a concise, AI-generated explanation of RHEL directly in your terminal. The exact wording may vary based on the LLM model and context.
+
+This initial interaction demonstrates the straightforward method of engaging with the assistant, providing a powerful entry point to its extensive capabilities.
+```
